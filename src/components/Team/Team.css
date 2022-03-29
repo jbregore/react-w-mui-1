@@ -1,0 +1,137 @@
+.app__team {
+  text-align: center;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+.app__team .app__wrapper {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  gap: 30px;
+}
+
+.app__team-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-right: 0;
+}
+
+.app__team img {
+  width: 100%;
+  cursor: pointer;
+}
+
+.app__team-container {
+  position: relative;
+  width: 100%;
+  display: inline-block;
+}
+
+/* .app__team-overlay {
+  position: absolute;
+  transition: all 0.5s ease;
+  opacity: 0;
+  background-color: #5a331d2c;
+  height: 100%;
+  width: 0;
+  left: 0;
+  top: 0;
+  cursor: pointer;
+} */
+
+.app__team-container:hover .app__team-icon-container {
+  width: 50px;
+  opacity: 1;
+}
+
+.app__team-container:hover .app__team-text-bottom {
+  height: 80%;
+  opacity: 1;
+}
+
+/*.app__team-icon {
+  font-size: 32px;
+  margin-top: 10px;
+   transition: all 0.5s ease; 
+}*/
+
+.app__team-icon:hover {
+  color: var(--color-orange);
+}
+
+.app__team-icon-container {
+  /* background-color: green; */
+  /* display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center; */
+  /* margin: auto; */
+  /* position: absolute;
+  width: 50px;
+  top: 0;
+  left: 0;
+  height: 100%;
+  background-color: #3f2b20a8;
+   */
+  position: absolute;
+  width: 0;
+  transition: all 0.3s ease;
+  opacity: 0;
+  height: 100%;
+  background-color: #3f2b20a8;
+  color: #fff;
+  left: 0;
+  top: 0;
+  cursor: pointer;
+  z-index: 4;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.app__team-text-bottom {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  /* transition: all 0.3s ease; */
+  transition: .3s ease-out;
+  background-color: #5347405b;
+  width: 100%;
+  /* padding-top: 20px; */
+  height: 0;
+  /* height: 100%; */
+  opacity: 0;
+  background: linear-gradient(to top, #36261cc4, transparent);
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column;
+  align-items: center;
+  /* z-index: -1; */
+}
+
+.app__team-text-bottom {
+  color: #fff;
+}
+
+@media screen and (max-width: 1250px) {
+  .app__team .app__wrapper {
+    grid-template-columns: auto auto auto;
+  }
+
+  .app__team-container {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 950px) {
+  .app__team .app__wrapper {
+    grid-template-columns: auto auto;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .app__team .app__wrapper {
+    grid-template-columns: auto;
+  }
+}
